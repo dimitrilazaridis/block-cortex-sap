@@ -72,6 +72,7 @@ view: inventory_metrics_overview {
   dimension: cost_of_goods_sold {
     type: number
     sql: ${TABLE}.CostOfGoodsSold ;;
+    hidden: no
   }
 
   dimension: cost_of_goods_sold_as_of_key_date {
@@ -116,6 +117,7 @@ view: inventory_metrics_overview {
   dimension: fiscal_year {
     type: string
     sql: ${TABLE}.FiscalYear ;;
+    hidden: no
   }
 
   dimension: inventory_turn {
