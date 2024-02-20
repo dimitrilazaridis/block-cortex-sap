@@ -78,6 +78,13 @@ view: inventory_metrics_overview {
   dimension: cost_of_goods_sold_as_of_key_date {
     type: number
     sql: ${TABLE}.CostOfGoodsSoldByMonth ;;
+    hidden: no
+  }
+
+  measure: sum_cost_of_goods_sold_as_of_key_date {
+    type: sum
+    sql: ${cost_of_goods_sold_as_of_key_date} ;;
+    hidden: no
   }
 
   dimension: country_key_land1 {
