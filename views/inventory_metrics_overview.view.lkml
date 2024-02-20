@@ -3,7 +3,7 @@ view: inventory_metrics_overview {
     sql: select * from `@{GCP_PROJECT}.@{REPORTING_DATASET}.InventoryKeyMetrics`
       ;;
   }
-  
+
   fields_hidden_by_default: yes
 
   dimension: key {
@@ -81,6 +81,7 @@ view: inventory_metrics_overview {
 
   dimension: country_key_land1 {
     type: string
+    map_layer_name: countries
     sql: ${TABLE}.CountryKey_LAND1 ;;
     hidden: no
   }
