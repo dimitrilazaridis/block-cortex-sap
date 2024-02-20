@@ -119,6 +119,7 @@ view: inventory_metrics_overview {
   dimension: fiscal_period {
     type: string
     sql: ${TABLE}.FiscalPeriod ;;
+    hidden: no
   }
 
   dimension: fiscal_year {
