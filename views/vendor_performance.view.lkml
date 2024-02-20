@@ -180,6 +180,7 @@ view: vendor_performance {
 
   dimension: country_key_land1 {
     type: string
+    map_layer_name: countries
     label: "Vendor Country"
     sql: ${TABLE}.CountryKey_LAND1 ;;
     hidden: no
@@ -191,13 +192,13 @@ view: vendor_performance {
     suggest_persist_for: "10 minutes"
     hidden: no
   }
-  
+
   dimension: target_currency_tcurr {
     type: string
     sql: ${TABLE}.TargetCurrency_TCURR ;;
     hidden: no
   }
-  
+
   dimension: currency_key_waers2 {
     type: string
     sql: ${TABLE}.CurrencyKey_WAERS ;;
@@ -275,6 +276,7 @@ view: vendor_performance {
   dimension: material_group {
     type: string
     sql: ${TABLE}.MaterialGroup_MATKL ;;
+    hidden: no
   }
 
   dimension_group: item_delivery_date_eindt {
@@ -432,7 +434,7 @@ view: vendor_performance {
     sql: ${name1} ;;
     hidden: no
   }
-  
+
   dimension: net_order_valuein_pocurrency_netwr {
     type: number
     sql: ${TABLE}.NetOrderValueinPOCurrency_NETWR ;;
@@ -760,6 +762,7 @@ view: vendor_performance {
   measure: sum_spend_by_material_type {
     type: sum
     sql: ${invoice_amount_in_source_currency} ;;
+    hidden: no
   }
 
 
@@ -773,6 +776,7 @@ view: vendor_performance {
     type: sum
     sql: ${invoice_amount_in_source_currency} ;;
     value_format_name: Greek_Number_Format
+    hidden: no
   }
 
   measure: sum_spend_by_month {
