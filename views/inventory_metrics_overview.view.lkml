@@ -331,9 +331,23 @@ view: inventory_metrics_overview {
     sql: ${TABLE}.StockOnHand ;;
   }
 
+  measure: sum_stock_on_hand {
+    type: sum
+    label: "Stock on Hand"
+    sql: ${stock_on_hand} ;;
+    hidden: no
+  }
+
   dimension: total_consumption_quantity {
     type: number
     sql: ${TABLE}.TotalConsumptionQuantity ;;
+  }
+
+  measure: sum_total_consumption_quantity {
+    type: sum
+    label: "Total Consumption Quantity"
+    sql: ${total_consumption_quantity} ;;
+    hidden: no
   }
 
   dimension: unit_of_measure_meins {
