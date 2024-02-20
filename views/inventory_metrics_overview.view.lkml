@@ -83,6 +83,7 @@ view: inventory_metrics_overview {
 
   measure: sum_cost_of_goods_sold_as_of_key_date {
     type: sum
+    label: "Cost of Goods Sold"
     sql: ${cost_of_goods_sold_as_of_key_date} ;;
     hidden: no
   }
