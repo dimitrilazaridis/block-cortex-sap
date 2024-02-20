@@ -160,7 +160,7 @@ view: inventory_metrics_overview {
     sql: ${inventory_turn} ;;
     hidden: no
     filters: [inventory_turn: ">=0"]
-    value_format: "0.0"
+    value_format: "0.00"
     }
 
   measure: sum_inventory_turn {
