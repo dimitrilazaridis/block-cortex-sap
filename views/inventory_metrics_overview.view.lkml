@@ -141,18 +141,27 @@ view: inventory_metrics_overview {
   }
 
 
+  # measure: average_inventory_turn {
+  #   type: average
+  #   label: "Inventory Turn"
+  #   sql: ${inventory_turn} ;;
+  #   link: {
+  #     label: "{{ inventory_metrics_overview.material_group_name_wgbez._value }}"
+  #     url: "{{drill_fields._link}}"
+  #   }
+  #   hidden: no
+  #   filters: [inventory_turn: ">=0"]
+  #   #drill_fields: [material_group_name_wgbez,plant_name2_name2,material_text_maktx,average_inventory_turn]
+  # }
+
   measure: average_inventory_turn {
     type: average
     label: "Inventory Turn"
     sql: ${inventory_turn} ;;
-    link: {
-      label: "{{ inventory_metrics_overview.material_group_name_wgbez._value }}"
-      url: "{{drill_fields._link}}"
-    }
     hidden: no
     filters: [inventory_turn: ">=0"]
-    #drill_fields: [material_group_name_wgbez,plant_name2_name2,material_text_maktx,average_inventory_turn]
-  }
+    value_format: "0.0"
+    }
 
   measure: sum_inventory_turn {
     type: number
