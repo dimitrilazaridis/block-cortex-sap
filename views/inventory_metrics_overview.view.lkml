@@ -89,6 +89,7 @@ view: inventory_metrics_overview {
   }
 
   dimension: country_key_land1 {
+    label: "Country"
     type: string
     map_layer_name: countries
     sql: ${TABLE}.CountryKey_LAND1 ;;
